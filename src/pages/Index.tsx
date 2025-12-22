@@ -393,11 +393,22 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, i) => (
-              <Card key={i} className="bg-white/10 border-white/20 hover:bg-white/15 transition-all hover:scale-105 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white">{service.name}</h3>
-                  {service.desc && <p className="text-sm text-gray-400 mb-3">{service.desc}</p>}
-                  <div className="text-2xl font-black text-[#FFD700]">{service.price}</div>
+              <Card key={i} className="bg-gradient-to-br from-white/10 to-white/5 border-2 border-[#FFD700]/30 hover:border-[#FFD700] hover:shadow-xl hover:shadow-[#FFD700]/20 transition-all hover:scale-105 backdrop-blur-sm group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#DC143C]/10 rounded-full blur-3xl group-hover:bg-[#DC143C]/20 transition-all"></div>
+                <CardContent className="p-6 relative z-10">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-xl font-bold text-white group-hover:text-[#FFD700] transition-colors flex-1">{service.name}</h3>
+                    <div className="ml-2 bg-[#FFD700]/20 group-hover:bg-[#FFD700]/30 rounded-full p-2 transition-all">
+                      <Icon name="Sparkles" size={20} className="text-[#FFD700]" />
+                    </div>
+                  </div>
+                  {service.desc && (
+                    <p className="text-sm text-gray-300 mb-4 leading-relaxed">{service.desc}</p>
+                  )}
+                  <div className="flex items-center justify-between pt-3 border-t border-white/10">
+                    <div className="text-3xl font-black text-[#FFD700] group-hover:scale-110 transition-transform">{service.price}</div>
+                    <Icon name="ArrowRight" size={24} className="text-[#FFD700] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  </div>
                 </CardContent>
               </Card>
             ))}
