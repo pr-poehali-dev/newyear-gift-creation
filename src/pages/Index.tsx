@@ -11,6 +11,16 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [snowflakes, setSnowflakes] = useState<Array<{id: number, left: string, duration: string, delay: string}>>([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselImages = [
+    { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg', alt: 'Наряжаем ёлку с героем фильма' },
+    { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg', alt: 'Стань Дедом Морозом или Снегурочкой' },
+    { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg', alt: 'Подари веру в волшебство' },
+    { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:06:30.jpg', alt: 'Новогодняя фотосессия' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-img1-__37394.png', alt: 'Волшебная атмосфера' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-__80686.png', alt: 'Праздничное настроение' },
+  ];
 
   useEffect(() => {
     const flakes = Array.from({ length: 30 }, (_, i) => ({
@@ -21,6 +31,13 @@ const Index = () => {
     }));
     setSnowflakes(flakes);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
 
   const services = [
     { name: '🎬 Видео от Деда Мороза', price: '1 490₽' },
@@ -143,27 +160,37 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
-                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
-                  <img 
-                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg" 
-                    alt="Наряжаем ёлку с героем фильма" 
-                    className="w-full h-32 object-cover"
-                  />
+              <div className="relative max-w-md mx-auto lg:mx-0 overflow-hidden">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 33.333}%)` }}
+                >
+                  {carouselImages.map((image, index) => (
+                    <div 
+                      key={index}
+                      className="min-w-[33.333%] px-1.5"
+                    >
+                      <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img 
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-32 object-cover"
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
-                  <img 
-                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg" 
-                    alt="Стань Дедом Морозом или Снегурочкой" 
-                    className="w-full h-32 object-cover"
-                  />
-                </div>
-                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
-                  <img 
-                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg" 
-                    alt="Подари веру в волшебство" 
-                    className="w-full h-32 object-cover"
-                  />
+                <div className="flex justify-center gap-2 mt-3">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-[#FFD700] w-6' : 'bg-white/30 hover:bg-white/50'
+                      }`}
+                      aria-label={`Слайд ${index + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
