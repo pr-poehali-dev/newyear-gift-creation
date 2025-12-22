@@ -219,18 +219,6 @@ const Index = () => {
             </div>
             
             <div className="relative space-y-4">
-              <div className="absolute -left-12 top-1/4 hidden xl:flex flex-col gap-6 text-4xl animate-bounce" style={{ animationDuration: '3s' }}>
-                <span className="opacity-70 hover:opacity-100 transition-opacity cursor-default">🎄</span>
-                <span className="opacity-60 hover:opacity-100 transition-opacity cursor-default">✨</span>
-                <span className="opacity-70 hover:opacity-100 transition-opacity cursor-default">🎁</span>
-              </div>
-              
-              <div className="absolute -right-12 top-1/3 hidden xl:flex flex-col gap-6 text-4xl animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>
-                <span className="opacity-60 hover:opacity-100 transition-opacity cursor-default">⭐</span>
-                <span className="opacity-70 hover:opacity-100 transition-opacity cursor-default">🎅</span>
-                <span className="opacity-60 hover:opacity-100 transition-opacity cursor-default">❄️</span>
-              </div>
-
               <div className="relative max-w-md mx-auto lg:mx-0">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] transition-all duration-500">
                   <img 
