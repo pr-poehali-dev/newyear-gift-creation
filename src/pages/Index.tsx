@@ -81,7 +81,15 @@ const Index = () => {
         'https://cdn.poehali.dev/files/IMAGE 2025-12-22 15:47:02.jpg'
       ]
     },
-    { type: 'photo', title: 'Северный стиль', desc: 'Ледяной дворец, огни', emoji: '❄️' },
+    { 
+      type: 'photo', 
+      title: 'Северный стиль', 
+      desc: 'Ледяной дворец, огни', 
+      emoji: '❄️',
+      images: [
+        'https://cdn.poehali.dev/files/freepik__-img1-__90887.png'
+      ]
+    },
   ];
 
   const stats = [
