@@ -197,7 +197,7 @@ const Index = () => {
                 >
                   <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
                     <Icon name="Gift" size={20} className="mr-2" />
-                    Получить подарок
+                    Получить бонус
                   </a>
                 </Button>
                 <Button 
