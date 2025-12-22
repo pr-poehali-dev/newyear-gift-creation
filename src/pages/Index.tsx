@@ -166,9 +166,15 @@ const Index = () => {
                 Видео от кумира • Фотосессия мечты • Оживление фото за 24 часов
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold text-lg px-8 py-6 hover:scale-105 transition-transform">
-                  <Icon name="Gift" size={20} className="mr-2" />
-                  Получить подарок
+                <Button 
+                  size="lg" 
+                  className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold text-lg px-8 py-6 hover:scale-105 transition-transform"
+                  asChild
+                >
+                  <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Gift" size={20} className="mr-2" />
+                    Получить подарок
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0a1f3f] font-bold text-lg px-8 py-6">
                   <Icon name="Play" size={20} className="mr-2" />
