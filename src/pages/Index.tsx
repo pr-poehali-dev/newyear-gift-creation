@@ -328,7 +328,8 @@ const Index = () => {
                         <img 
                           src={item.images[0]} 
                           alt={item.title}
-                          className="w-full h-64 object-cover object-top rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                          className="w-full h-64 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                          style={{ objectPosition: '50% 15%' }}
                           onClick={() => setModalImage(item.images[0])}
                         />
                       ) : (
