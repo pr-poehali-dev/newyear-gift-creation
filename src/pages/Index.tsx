@@ -195,9 +195,16 @@ const Index = () => {
                     Получить подарок
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0a1f3f] font-bold text-lg px-8 py-6">
-                  <Icon name="Play" size={20} className="mr-2" />
-                  Смотреть примеры
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0a1f3f] font-bold text-lg px-8 py-6"
+                  asChild
+                >
+                  <a href="https://t.me/stanistudio" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Play" size={20} className="mr-2" />
+                    Смотреть примеры
+                  </a>
                 </Button>
               </div>
               <div className="text-base md:text-lg text-gray-400 italic">
