@@ -408,6 +408,19 @@ const Index = () => {
               </Card>
             ))}
           </div>
+
+          <div className="text-center my-8">
+            <Button 
+              size="lg" 
+              className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold text-xl px-12 py-6 hover:scale-105 transition-transform"
+              asChild
+            >
+              <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+                <Icon name="MessageCircle" size={24} className="mr-2" />
+                Оставить заявку
+              </a>
+            </Button>
+          </div>
           
           <Card className="bg-gradient-to-br from-[#DC143C] to-[#8B0000] border-[#FFD700] border-4 hover:scale-105 transition-transform">
             <CardContent className="p-8 text-center">
@@ -430,19 +443,6 @@ const Index = () => {
               </Button>
             </CardContent>
           </Card>
-
-          <div className="text-center mt-8">
-            <Button 
-              size="lg" 
-              className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold text-xl px-12 py-6 hover:scale-105 transition-transform"
-              asChild
-            >
-              <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
-                <Icon name="Gift" size={24} className="mr-2" />
-                Заказать подарок
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
 
