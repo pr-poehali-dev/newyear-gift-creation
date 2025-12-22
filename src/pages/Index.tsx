@@ -378,9 +378,15 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center">
-            <Button size="lg" className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white font-bold text-lg px-8">
-              <Icon name="ExternalLink" size={20} className="mr-2" />
-              Смотреть все работы в Telegram
+            <Button 
+              size="lg" 
+              className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white font-bold text-lg px-8"
+              asChild
+            >
+              <a href="https://t.me/stanistudio" target="_blank" rel="noopener noreferrer">
+                <Icon name="ExternalLink" size={20} className="mr-2" />
+                Смотреть все работы в Telegram
+              </a>
             </Button>
           </div>
         </div>
