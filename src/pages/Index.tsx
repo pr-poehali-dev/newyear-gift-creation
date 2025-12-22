@@ -69,7 +69,18 @@ const Index = () => {
     { type: 'video', title: 'Дед Мороз', desc: 'Именное поздравление от Деда Мороза', emoji: '🎅', link: 'https://rutube.ru/shorts/af3f7cb8f832e0b1c7b627ecade822d9/' },
     { type: 'video', title: 'Видеосказка про семью', desc: 'Ваша семья - в волшебной сказке с любимыми героями фильмов Детства', emoji: '🎭', link: 'https://rutube.ru/shorts/8900b17408081bb4e3c1c966a80de32c/' },
     { type: 'video', title: 'Новогодний ролик для Компании', desc: 'Рекламный ролик для объявления скидок клиентам в уникальном стиле☃️', emoji: '⭐', link: 'https://rutube.ru/shorts/9c9e47e7622a5715a16d876f5f38a134/' },
-    { type: 'photo', title: 'Новогодняя фотосессия', desc: '10 студийных фото в разных стилях с Вами', emoji: '📸' },
+    { 
+      type: 'photo', 
+      title: 'Новогодняя фотосессия', 
+      desc: '10 студийных фото в разных стилях с Вами', 
+      emoji: '📸',
+      images: [
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 13:48:06.jpg',
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg',
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg',
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg'
+      ]
+    },
     { type: 'photo', title: 'Северный стиль', desc: 'Ледяной дворец, огни', emoji: '❄️' },
   ];
 
@@ -303,7 +314,23 @@ const Index = () => {
             {portfolio.map((item, i) => (
               <Card key={i} className="bg-white/10 border-white/20 hover:bg-white/15 transition-all hover:scale-105 backdrop-blur-sm group cursor-pointer">
                 <CardContent className="p-6 text-center">
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.emoji}</div>
+                  {item.images && item.images.length > 0 ? (
+                    <div className="mb-4">
+                      <div className="grid grid-cols-2 gap-2">
+                        {item.images.slice(0, 4).map((img, idx) => (
+                          <img 
+                            key={idx}
+                            src={img} 
+                            alt={`${item.title} ${idx + 1}`}
+                            className="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                            onClick={() => setModalImage(img)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.emoji}</div>
+                  )}
                   <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                   <p className="text-sm text-gray-400">{item.desc}</p>
                   {item.link ? (
@@ -316,6 +343,11 @@ const Index = () => {
                       <Icon name="Play" size={16} className="mr-1" />
                       Смотреть
                     </a>
+                  ) : item.images ? (
+                    <div className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline">
+                      <Icon name="Images" size={16} className="mr-1" />
+                      {item.images.length} фото
+                    </div>
                   ) : (
                     <div className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline">
                       <Icon name="Play" size={16} className="mr-1" />
