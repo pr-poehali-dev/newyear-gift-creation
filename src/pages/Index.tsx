@@ -15,6 +15,7 @@ const Index = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   const carouselImages = [
+    { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 13:48:06.jpg', alt: 'Поздравьте всех с Новым Годом от себя с кумиром' },
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg', alt: 'Наряжаем ёлку с героем фильма' },
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg', alt: 'Стань Дедом Морозом или Снегурочкой' },
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg', alt: 'Подари веру в волшебство' },
