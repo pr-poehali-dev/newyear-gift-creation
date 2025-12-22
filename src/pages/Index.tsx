@@ -129,7 +129,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] hover:scale-105 transition-transform duration-300">
                 <img 
                   src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:00:49.jpg" 
@@ -137,8 +137,8 @@ const Index = () => {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-[#DC143C] text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl">
-                ⭐ Пример нашей работы
+              <div className="absolute -bottom-4 -right-4 bg-[#DC143C] text-white px-4 py-2 rounded-lg font-bold text-sm shadow-xl">
+                ⭐ Пример работы
               </div>
             </div>
           </div>
