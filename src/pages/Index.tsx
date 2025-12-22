@@ -519,9 +519,9 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-4">
             <img 
-              src="https://cdn.poehali.dev/files/IMAGE 2025-12-23 02:30:11.jpg" 
+              src="https://cdn.poehali.dev/projects/56bf390a-fd40-422d-aa42-c819fb4bd086/files/bb6f9c3b-8058-4db6-a8c7-e2cfbfda840c.jpg" 
               alt="StaniStudio - студия ИИ-разработок" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </div>
           <p className="text-gray-400 mb-2">Первая в Приморье студия нейроподарков</p>
