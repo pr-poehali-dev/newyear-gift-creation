@@ -100,7 +100,7 @@ const Index = () => {
 
   const steps = [
     { num: 1, title: 'Заявка', desc: 'Пиши в Telegram за 5 мин', icon: 'MessageCircle' },
-    { num: 2, title: 'Создаём', desc: '4K видео за 24-48 часов', icon: 'Film' },
+    { num: 2, title: 'Создаём', desc: 'HD фото/видео за 12-48 часов', icon: 'Film' },
     { num: 3, title: 'Проверяешь', desc: 'Правки бесплатно', icon: 'Eye' },
     { num: 4, title: 'Даришь', desc: 'Люди плачут от радости', icon: 'Gift' },
   ];
