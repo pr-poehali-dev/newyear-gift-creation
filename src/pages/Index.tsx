@@ -22,6 +22,14 @@ const Index = () => {
     { src: 'https://cdn.poehali.dev/files/freepik__-__80686.png', alt: 'Праздничное настроение' },
   ];
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
+
   useEffect(() => {
     const flakes = Array.from({ length: 30 }, (_, i) => ({
       id: i,
@@ -146,7 +154,19 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="space-y-4">
+            <div className="relative space-y-4">
+              <div className="absolute -left-12 top-1/4 hidden xl:flex flex-col gap-6 text-4xl animate-bounce" style={{ animationDuration: '3s' }}>
+                <span className="opacity-70 hover:opacity-100 transition-opacity cursor-default">🎄</span>
+                <span className="opacity-60 hover:opacity-100 transition-opacity cursor-default">✨</span>
+                <span className="opacity-70 hover:opacity-100 transition-opacity cursor-default">🎁</span>
+              </div>
+              
+              <div className="absolute -right-12 top-1/3 hidden xl:flex flex-col gap-6 text-4xl animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>
+                <span className="opacity-60 hover:opacity-100 transition-opacity cursor-default">⭐</span>
+                <span className="opacity-70 hover:opacity-100 transition-opacity cursor-default">🎅</span>
+                <span className="opacity-60 hover:opacity-100 transition-opacity cursor-default">❄️</span>
+              </div>
+
               <div className="relative max-w-md mx-auto lg:mx-0">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] hover:scale-105 transition-transform duration-300">
                   <img 
@@ -160,26 +180,45 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="relative max-w-md mx-auto lg:mx-0 overflow-hidden">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 33.333}%)` }}
+              <div className="relative max-w-md mx-auto lg:mx-0 overflow-visible">
+                <button
+                  onClick={prevSlide}
+                  className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#0a1f3f] rounded-full p-2 shadow-xl transition-all hover:scale-110"
+                  aria-label="Предыдущий слайд"
                 >
-                  {carouselImages.map((image, index) => (
-                    <div 
-                      key={index}
-                      className="min-w-[33.333%] px-1.5"
-                    >
-                      <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
-                        <img 
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-32 object-cover"
-                        />
+                  <Icon name="ChevronLeft" size={24} />
+                </button>
+                
+                <button
+                  onClick={nextSlide}
+                  className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#0a1f3f] rounded-full p-2 shadow-xl transition-all hover:scale-110"
+                  aria-label="Следующий слайд"
+                >
+                  <Icon name="ChevronRight" size={24} />
+                </button>
+
+                <div className="overflow-hidden rounded-lg">
+                  <div 
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{ transform: `translateX(-${currentSlide * 33.333}%)` }}
+                  >
+                    {carouselImages.map((image, index) => (
+                      <div 
+                        key={index}
+                        className="min-w-[33.333%] px-1.5"
+                      >
+                        <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <img 
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-32 object-cover"
+                          />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
+                
                 <div className="flex justify-center gap-2 mt-3">
                   {carouselImages.map((_, index) => (
                     <button
