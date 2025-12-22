@@ -389,7 +389,7 @@ const Index = () => {
       <section id="services" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
-            <span className="text-[#FFD700]">15+</span> УСЛУГ НА ВЫБОР
+            <span className="text-[#FFD700]">10+</span> УСЛУГ НА ВЫБОР
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, i) => (
