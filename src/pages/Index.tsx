@@ -129,16 +129,42 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] hover:scale-105 transition-transform duration-300">
-                <img 
-                  src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:00:49.jpg" 
-                  alt="Пример AI-видео с кумиром" 
-                  className="w-full h-auto"
-                />
+            <div className="space-y-4">
+              <div className="relative max-w-md mx-auto lg:mx-0">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:00:49.jpg" 
+                    alt="Пример AI-видео с кумиром" 
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-[#DC143C] text-white px-4 py-2 rounded-lg font-bold text-sm shadow-xl">
+                  ⭐ Пример работы
+                </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-[#DC143C] text-white px-4 py-2 rounded-lg font-bold text-sm shadow-xl">
-                ⭐ Пример работы
+              
+              <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <img 
+                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:06:30.jpg" 
+                    alt="Новогодняя фотосессия с детьми" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <img 
+                    src="https://cdn.poehali.dev/files/freepik__-img1-__37394.png" 
+                    alt="Волшебная новогодняя атмосфера" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <img 
+                    src="https://cdn.poehali.dev/files/freepik__-__80686.png" 
+                    alt="Дед Мороз и Снегурочка" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
