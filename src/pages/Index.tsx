@@ -102,7 +102,7 @@ const Index = () => {
       <section className="py-20 px-6 text-center relative">
         <div className="container mx-auto max-w-5xl">
           <div className="inline-block mb-6 px-6 py-2 bg-[#DC143C] rounded-full text-sm font-bold animate-pulse">
-            🔥 ДО 2 ЯНВАРЯ: -20% ДЛЯ ПЕРВЫХ 20 КЛИЕНТОВ
+            🔥 ПОСЛЕ 28 ДЕКАБРЯ - РОСТ ЦЕН, УСПЕВАЙ СЕЙЧАС
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
             <span className="text-[#FFD700]">ПОДАРОК</span> КОТОРЫЙ<br />
