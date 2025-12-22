@@ -340,6 +340,7 @@ const Index = () => {
                               src={img} 
                               alt={`${item.title} ${idx + 1}`}
                               className="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                              style={{ objectPosition: '50% 20%' }}
                               onClick={() => setModalImage(img)}
                             />
                           ))}
