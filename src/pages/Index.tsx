@@ -425,9 +425,15 @@ const Index = () => {
                 <span className="text-2xl text-white/50 line-through">6 500₽</span>
                 <span className="text-5xl font-black text-[#FFD700]">4 990₽</span>
               </div>
-              <Button size="lg" className="bg-[#FFD700] text-[#0a1f3f] hover:bg-[#FFD700]/90 font-bold text-lg px-8">
-                <Icon name="Star" size={20} className="mr-2" />
-                Заказать комбо
+              <Button 
+                size="lg" 
+                className="bg-[#FFD700] text-[#0a1f3f] hover:bg-[#FFD700]/90 font-bold text-lg px-8"
+                asChild
+              >
+                <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Star" size={20} className="mr-2" />
+                  Заказать комбо
+                </a>
               </Button>
             </CardContent>
           </Card>
