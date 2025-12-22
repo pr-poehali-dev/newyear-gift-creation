@@ -75,10 +75,10 @@ const Index = () => {
       desc: '10 студийных фото в разных стилях с Вами', 
       emoji: '📸',
       images: [
-        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 13:48:06.jpg',
-        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg',
-        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg',
-        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg'
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 15:46:54.jpg',
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 15:46:57.jpg',
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 15:47:00.jpg',
+        'https://cdn.poehali.dev/files/IMAGE 2025-12-22 15:47:02.jpg'
       ]
     },
     { type: 'photo', title: 'Северный стиль', desc: 'Ледяной дворец, огни', emoji: '❄️' },
