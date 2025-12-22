@@ -12,11 +12,15 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [snowflakes, setSnowflakes] = useState<Array<{id: number, left: string, duration: string, delay: string}>>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [modalImage, setModalImage] = useState<string | null>(null);
 
   const carouselImages = [
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg', alt: 'Наряжаем ёлку с героем фильма' },
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg', alt: 'Стань Дедом Морозом или Снегурочкой' },
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg', alt: 'Подари веру в волшебство' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-img1-__66246.png', alt: 'Ваше фото со звёздами фильма' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-img1-80-__90885.png', alt: 'Открытка в стиле 80-х' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-img1-__90888.png', alt: 'Съёмки с любимым актёром' },
     { src: 'https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:06:30.jpg', alt: 'Новогодняя фотосессия' },
     { src: 'https://cdn.poehali.dev/files/freepik__-img1-__37394.png', alt: 'Волшебная атмосфера' },
     { src: 'https://cdn.poehali.dev/files/freepik__-__80686.png', alt: 'Праздничное настроение' },
@@ -91,6 +95,29 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a1f3f] via-[#1a2f4f] to-[#0a1f3f] text-white overflow-hidden relative">
+      {modalImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setModalImage(null)}
+        >
+          <button
+            onClick={() => setModalImage(null)}
+            className="absolute top-4 right-4 bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#0a1f3f] rounded-full p-3 shadow-xl transition-all hover:scale-110 z-10"
+            aria-label="Закрыть"
+          >
+            <Icon name="X" size={24} />
+          </button>
+          <div className="max-w-4xl max-h-[90vh] relative">
+            <img 
+              src={modalImage} 
+              alt="Увеличенное фото" 
+              className="w-full h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+
       {snowflakes.map((flake) => (
         <div
           key={flake.id}
@@ -207,7 +234,10 @@ const Index = () => {
                         key={index}
                         className="min-w-[33.333%] px-1.5"
                       >
-                        <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <div 
+                          className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer"
+                          onClick={() => setModalImage(image.src)}
+                        >
                           <img 
                             src={image.src}
                             alt={image.alt}
