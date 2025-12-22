@@ -142,7 +142,39 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-6">
+      <section id="portfolio" className="py-20 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
+              👀 СМОТРИ ЧТО МЫ <span className="text-[#DC143C]">СОЗДАЁМ</span>
+            </h2>
+            <p className="text-xl text-gray-300">Реальные примеры из 100 выполненных подарков</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {portfolio.map((item, i) => (
+              <Card key={i} className="bg-white/10 border-white/20 hover:bg-white/15 transition-all hover:scale-105 backdrop-blur-sm group cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.emoji}</div>
+                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
+                  <p className="text-sm text-gray-400">{item.desc}</p>
+                  <div className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline">
+                    <Icon name="Play" size={16} className="mr-1" />
+                    Смотреть
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center">
+            <Button size="lg" className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white font-bold text-lg px-8">
+              <Icon name="ExternalLink" size={20} className="mr-2" />
+              Смотреть все работы в Telegram
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
             <span className="text-[#FFD700]">15+</span> УСЛУГ НА ВЫБОР
@@ -174,38 +206,6 @@ const Index = () => {
               </Button>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      <section id="portfolio" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
-              👀 СМОТРИ ЧТО МЫ <span className="text-[#DC143C]">СОЗДАЁМ</span>
-            </h2>
-            <p className="text-xl text-gray-300">Реальные примеры из 100 выполненных подарков</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {portfolio.map((item, i) => (
-              <Card key={i} className="bg-white/10 border-white/20 hover:bg-white/15 transition-all hover:scale-105 backdrop-blur-sm group cursor-pointer">
-                <CardContent className="p-6 text-center">
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.emoji}</div>
-                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
-                  <div className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline">
-                    <Icon name="Play" size={16} className="mr-1" />
-                    Смотреть
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center">
-            <Button size="lg" className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white font-bold text-lg px-8">
-              <Icon name="ExternalLink" size={20} className="mr-2" />
-              Смотреть все работы в Telegram
-            </Button>
-          </div>
         </div>
       </section>
 
