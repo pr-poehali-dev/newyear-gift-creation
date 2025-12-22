@@ -21,6 +21,8 @@ const Index = () => {
     { src: 'https://cdn.poehali.dev/files/freepik__-img1-__66246.png', alt: 'Ваше фото со звёздами фильма' },
     { src: 'https://cdn.poehali.dev/files/freepik__-img1-80-__90885.png', alt: 'Открытка в стиле 80-х' },
     { src: 'https://cdn.poehali.dev/files/freepik__-img1-__90888.png', alt: 'Съёмки с любимым актёром' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-img1-__90886.png', alt: 'Попробуй красной икры на Красной площади' },
+    { src: 'https://cdn.poehali.dev/files/freepik__-img1-__74106.png', alt: 'Персональная ёлочная игрушка' },
   ];
 
   const nextSlide = () => {
