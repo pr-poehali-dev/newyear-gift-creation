@@ -324,17 +324,26 @@ const Index = () => {
                 <CardContent className="p-6 text-center">
                   {item.images && item.images.length > 0 ? (
                     <div className="mb-4">
-                      <div className="grid grid-cols-2 gap-2">
-                        {item.images.slice(0, 4).map((img, idx) => (
-                          <img 
-                            key={idx}
-                            src={img} 
-                            alt={`${item.title} ${idx + 1}`}
-                            className="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
-                            onClick={() => setModalImage(img)}
-                          />
-                        ))}
-                      </div>
+                      {item.images.length === 1 ? (
+                        <img 
+                          src={item.images[0]} 
+                          alt={item.title}
+                          className="w-full h-64 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                          onClick={() => setModalImage(item.images[0])}
+                        />
+                      ) : (
+                        <div className="grid grid-cols-2 gap-2">
+                          {item.images.slice(0, 4).map((img, idx) => (
+                            <img 
+                              key={idx}
+                              src={img} 
+                              alt={`${item.title} ${idx + 1}`}
+                              className="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                              onClick={() => setModalImage(img)}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.emoji}</div>
