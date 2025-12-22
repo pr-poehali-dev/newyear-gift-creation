@@ -148,21 +148,42 @@ const Index = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:06:30.jpg" 
                     alt="Новогодняя фотосессия с детьми" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-32 object-cover"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
                   <img 
                     src="https://cdn.poehali.dev/files/freepik__-img1-__37394.png" 
                     alt="Волшебная новогодняя атмосфера" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-32 object-cover"
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
                   <img 
                     src="https://cdn.poehali.dev/files/freepik__-__80686.png" 
                     alt="Дед Мороз и Снегурочка" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <img 
+                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:08:57.jpg" 
+                    alt="Наряжаем ёлку с героем фильма" 
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <img 
+                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:00.jpg" 
+                    alt="Стань Дедом Морозом или Снегурочкой" 
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <img 
+                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:09:07.jpg" 
+                    alt="Подари веру в волшебство" 
+                    className="w-full h-32 object-cover"
                   />
                 </div>
               </div>
