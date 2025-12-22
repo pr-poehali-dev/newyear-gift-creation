@@ -56,7 +56,7 @@ const Index = () => {
     { name: '🎬 Видео от кумира', price: '1 700₽' },
     { name: '📸 Фотосессия Голливуд', desc: '10 фото разных стилей', price: '3 500₽' },
     { name: '📸 Фото с кумиром', desc: 'северный стиль, студийные', price: '500₽/шт' },
-    { name: '👧 Фото с героями мультфильмов', price: '1 490₽' },
+    { name: '👧 Фото с героями мультфильмов', price: '500₽' },
     { name: '👨‍👩‍👧‍👦 Семейная фотосессия', price: '1 490₽' },
     { name: '🎨 Открытки в стиле 80-х', price: '500₽' },
     { name: '🎄 Ёлочные игрушки', price: '500₽' },
@@ -399,13 +399,15 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, i) => (
-              <Card key={i} className="bg-white/10 border-white/20 hover:bg-white/15 transition-all hover:scale-105 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white">{service.name}</h3>
-                  {service.desc && <p className="text-sm text-gray-400 mb-3">{service.desc}</p>}
-                  <div className="text-2xl font-black text-[#FFD700]">{service.price}</div>
-                </CardContent>
-              </Card>
+              <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer" key={i}>
+                <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition-all hover:scale-105 backdrop-blur-sm cursor-pointer h-full">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-white">{service.name}</h3>
+                    {service.desc && <p className="text-sm text-gray-400 mb-3">{service.desc}</p>}
+                    <div className="text-2xl font-black text-[#FFD700]">{service.price}</div>
+                  </CardContent>
+                </Card>
+              </a>
             ))}
           </div>
 
