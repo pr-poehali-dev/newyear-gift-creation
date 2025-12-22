@@ -65,7 +65,7 @@ const Index = () => {
   ];
 
   const portfolio = [
-    { type: 'video', title: 'Видеосет с звёздами', desc: 'голливудские звёзды делают с вами селфи, как с суперзвездой🤩', emoji: '🎬' },
+    { type: 'video', title: 'Видеосет с звёздами', desc: 'голливудские звёзды делают с вами селфи, как с суперзвездой🤩', emoji: '🎬', link: 'https://rutube.ru/shorts/6efc98d1fca42abf290dfc707019c1cb/' },
     { type: 'video', title: 'Дед Мороз', desc: 'Личное поздравление по имени', emoji: '🎄' },
     { type: 'photo', title: 'Фотосессия Голливуд', desc: '10 студийных фото 4K', emoji: '📸' },
     { type: 'photo', title: 'Фото с кумиром', desc: 'Реалистичная композиция', emoji: '⭐' },
@@ -306,10 +306,22 @@ const Index = () => {
                   <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.emoji}</div>
                   <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                   <p className="text-sm text-gray-400">{item.desc}</p>
-                  <div className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline">
-                    <Icon name="Play" size={16} className="mr-1" />
-                    Смотреть
-                  </div>
+                  {item.link ? (
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline"
+                    >
+                      <Icon name="Play" size={16} className="mr-1" />
+                      Смотреть
+                    </a>
+                  ) : (
+                    <div className="mt-4 inline-flex items-center text-[#FFD700] group-hover:underline">
+                      <Icon name="Play" size={16} className="mr-1" />
+                      Смотреть
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
