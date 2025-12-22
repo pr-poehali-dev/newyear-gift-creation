@@ -100,30 +100,47 @@ const Index = () => {
       </header>
 
       <section className="py-20 px-6 text-center relative">
-        <div className="container mx-auto max-w-5xl">
-          <div className="inline-block mb-6 px-6 py-2 bg-[#DC143C] rounded-full text-sm font-bold animate-pulse">
-            🔥 ПОСЛЕ 28 ДЕКАБРЯ - РОСТ ЦЕН, УСПЕВАЙ СЕЙЧАС
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            <span className="text-[#FFD700]">ПОДАРОК</span> КОТОРЫЙ<br />
-            ПОМНЯТ <span className="text-[#DC143C]">10 ЛЕТ</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Видео от кумира • Фотосессия мечты • Оживление фото за 24 часов
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold text-lg px-8 py-6 hover:scale-105 transition-transform">
-              <Icon name="Gift" size={20} className="mr-2" />
-              Получить подарок
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0a1f3f] font-bold text-lg px-8 py-6">
-              <Icon name="Play" size={20} className="mr-2" />
-              Смотреть примеры
-            </Button>
-          </div>
-          <div className="text-lg text-gray-400 italic">
-            "Люди помнят 10% что слышат, 25% что видят,<br />
-            но <span className="text-[#FFD700] font-bold">65% что ЧУВСТВУЮТ</span>"
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <div className="inline-block mb-6 px-6 py-2 bg-[#DC143C] rounded-full text-sm font-bold animate-pulse">
+                🔥 ПОСЛЕ 28 ДЕКАБРЯ - РОСТ ЦЕН, УСПЕВАЙ СЕЙЧАС
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                <span className="text-[#FFD700]">ПОДАРОК</span> КОТОРЫЙ<br />
+                ПОМНЯТ <span className="text-[#DC143C]">10 ЛЕТ</span>
+              </h1>
+              <p className="text-lg md:text-xl mb-8 text-gray-300">
+                Видео от кумира • Фотосессия мечты • Оживление фото за 24 часов
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button size="lg" className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold text-lg px-8 py-6 hover:scale-105 transition-transform">
+                  <Icon name="Gift" size={20} className="mr-2" />
+                  Получить подарок
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0a1f3f] font-bold text-lg px-8 py-6">
+                  <Icon name="Play" size={20} className="mr-2" />
+                  Смотреть примеры
+                </Button>
+              </div>
+              <div className="text-base md:text-lg text-gray-400 italic">
+                "Люди помнят 10% что слышат, 25% что видят,<br />
+                но <span className="text-[#FFD700] font-bold">65% что ЧУВСТВУЮТ</span>"
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:00:49.jpg" 
+                  alt="Пример AI-видео с кумиром" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-[#DC143C] text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl">
+                ⭐ Пример нашей работы
+              </div>
+            </div>
           </div>
         </div>
       </section>
