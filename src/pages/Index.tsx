@@ -194,15 +194,15 @@ const Index = () => {
               </div>
 
               <div className="relative max-w-md mx-auto lg:mx-0">
-                <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] hover:scale-105 transition-transform duration-300">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FFD700] transition-all duration-500">
                   <img 
-                    src="https://cdn.poehali.dev/files/IMAGE 2025-12-22 11:00:49.jpg" 
-                    alt="Пример AI-видео с кумиром" 
+                    src={carouselImages[currentSlide].src}
+                    alt={carouselImages[currentSlide].alt}
                     className="w-full h-auto"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-[#DC143C] text-white px-4 py-2 rounded-lg font-bold text-sm shadow-xl">
-                  ⭐ Пример работы
+                  ⭐ {currentSlide + 1} / {carouselImages.length}
                 </div>
               </div>
               
@@ -234,8 +234,12 @@ const Index = () => {
                         className="min-w-[33.333%] px-1.5"
                       >
                         <div 
-                          className="rounded-lg overflow-hidden shadow-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105 transition-all duration-300 cursor-pointer"
-                          onClick={() => setModalImage(image.src)}
+                          className={`rounded-lg overflow-hidden shadow-lg border-2 transition-all duration-300 cursor-pointer ${
+                            index === currentSlide 
+                              ? 'border-[#FFD700] scale-105 ring-2 ring-[#FFD700]/50' 
+                              : 'border-[#FFD700]/50 hover:border-[#FFD700] hover:scale-105'
+                          }`}
+                          onClick={() => setCurrentSlide(index)}
                         >
                           <img 
                             src={image.src}
