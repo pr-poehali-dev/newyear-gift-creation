@@ -163,9 +163,14 @@ const Index = () => {
             <a href="#process" className="hover:text-[#FFD700] transition-colors">Процесс</a>
             <a href="#faq" className="hover:text-[#FFD700] transition-colors">FAQ</a>
           </nav>
-          <Button className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold">
-            <Icon name="Send" size={16} className="mr-2" />
-            Telegram
+          <Button 
+            className="bg-[#DC143C] hover:bg-[#DC143C]/90 text-white font-bold"
+            asChild
+          >
+            <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+              <Icon name="Send" size={16} className="mr-2" />
+              Telegram
+            </a>
           </Button>
         </div>
       </header>
@@ -507,9 +512,15 @@ const Index = () => {
           <p className="text-xl mb-8 text-white/90">
             Осталось всего 20 мест со скидкой -20%
           </p>
-          <Button size="lg" className="bg-[#FFD700] text-[#0a1f3f] hover:bg-[#FFD700]/90 font-bold text-xl px-12 py-8 hover:scale-105 transition-transform">
-            <Icon name="Send" size={24} className="mr-2" />
-            Написать в Telegram
+          <Button 
+            size="lg" 
+            className="bg-[#FFD700] text-[#0a1f3f] hover:bg-[#FFD700]/90 font-bold text-xl px-12 py-8 hover:scale-105 transition-transform"
+            asChild
+          >
+            <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+              <Icon name="Send" size={24} className="mr-2" />
+              Написать в Telegram
+            </a>
           </Button>
         </div>
       </section>
