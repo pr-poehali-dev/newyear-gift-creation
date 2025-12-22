@@ -517,12 +517,9 @@ const Index = () => {
 
       <footer className="py-8 px-6 border-t border-white/10 text-center">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-4">
-            <img 
-              src="https://cdn.poehali.dev/projects/56bf390a-fd40-422d-aa42-c819fb4bd086/files/bb6f9c3b-8058-4db6-a8c7-e2cfbfda840c.jpg" 
-              alt="StaniStudio - студия ИИ-разработок" 
-              className="h-20 w-auto"
-            />
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-3xl">🎁</span>
+            <span className="text-2xl font-bold text-[#FFD700]">StaniStudio</span>
           </div>
           <p className="text-gray-400 mb-2">Первая в Приморье студия нейроподарков</p>
           <p className="text-sm text-gray-500">© 2024-2025 StaniStudio</p>
